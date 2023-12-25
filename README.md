@@ -1,3 +1,7 @@
+# Information About Setup
+
+This is a empty boiler plate right now but in these chapter it was referench to how the design works and what we do! for more details! check your directory!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
