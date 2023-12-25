@@ -1,6 +1,54 @@
-# Information About Setup
+# 02 Information About Setup
 
 This is a empty boiler plate right now but in these chapter it was referench to how the design works and what we do! for more details! check your directory!
+
+# 03 How to implement tailwindcss for our design customization!
+
+Lets learn ! how can we implement the tailwindcss framework on react!
+
+Open tailwindcss official Website > Get started > Framework Guides > create react app
+
+Terminal:
+
+> npx create-react-app my-project
+> cd my-project
+
+create-react-app is a method to make your react application! and "cd" is changing your directory to my-project!
+
+Terminal:
+
+> npm install -D tailwindcss postcss autoprefixer
+> npx tailwindcss init -p
+
+In this section , we have to install tailwindcss postcss autoprefixer for my tailwind work perfectly
+after install the necessary packages and we have to initialize the tailwindcss as npx tailwindcss init -p
+
+> after then you will see some changes on for project directory
+> there will be 2 files added!
+> first is postcss.config.js
+> second is tailwind.config.js
+
+Now we need to modify the tailwind.config.js and write
+module.exports = {
+content: [
+"./src/**/*.{js,jsx,ts,tsx}",
+],
+theme: {
+extend: {},
+},
+plugins: [],
+}
+
+> We Have to add write these code above on your tailwind.config.js
+
+# Now open your index.css - remove unnessery css and add
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+# start your application
+> npm run start
 
 # Getting Started with Create React App
 
