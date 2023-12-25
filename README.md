@@ -1,3 +1,6 @@
+# This is a boyler plate of the starter application for eccomerce
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
