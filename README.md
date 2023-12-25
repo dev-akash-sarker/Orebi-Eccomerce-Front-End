@@ -11,6 +11,9 @@ Open tailwindcss official Website > Get started > Framework Guides > create reac
 Terminal:
 
 > npx create-react-app my-project
+
+-
+
 > cd my-project
 
 create-react-app is a method to make your react application! and "cd" is changing your directory to my-project!
@@ -18,18 +21,24 @@ create-react-app is a method to make your react application! and "cd" is changin
 Terminal:
 
 > npm install -D tailwindcss postcss autoprefixer
+
+-
+
 > npx tailwindcss init -p
 
 In this section , we have to install tailwindcss postcss autoprefixer for my tailwind work perfectly
 after install the necessary packages and we have to initialize the tailwindcss as npx tailwindcss init -p
 
-> after then you will see some changes on for project directory
-> there will be 2 files added!
-> first is postcss.config.js
-> second is tailwind.config.js
+## after then you will see some changes on for project directory
+
+## there will be 2 files added!
+
+## first is postcss.config.js
+
+## second is tailwind.config.js
 
 Now we need to modify the tailwind.config.js and write
-module.exports = {
+`module.exports = {
 content: [
 "./src/**/*.{js,jsx,ts,tsx}",
 ],
@@ -37,7 +46,7 @@ theme: {
 extend: {},
 },
 plugins: [],
-}
+}`
 
 > We Have to add write these code above on your tailwind.config.js
 
@@ -48,7 +57,10 @@ plugins: [],
 @tailwind utilities;
 
 # start your application
+
 > npm run start
+
+# Voila Now tailwind works fine! as we wanted!
 
 # Getting Started with Create React App
 
