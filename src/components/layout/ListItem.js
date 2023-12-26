@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function ListItem({ itemname }) {
+export default function ListItem({ itemname, className }) {
   return (
     <>
-      <li>{itemname}</li>
+      <li className={className}>{itemname}</li>
     </>
   );
 }
