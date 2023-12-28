@@ -5,11 +5,11 @@ export default function Dropdown({
   className,
   title,
   titleIcon,
-  onClick,
+  dropref,
 }) {
   return (
-    <div className={className} onClick={onClick}>
-      <p className="flex items-center gap-4 font-dmsans text-sm font-normal">
+    <div className={className} ref={dropref}>
+      <p className="flex items-center gap-2 font-dmsans text-sm font-normal">
         {titleIcon} {title}
       </p>
       {children}
