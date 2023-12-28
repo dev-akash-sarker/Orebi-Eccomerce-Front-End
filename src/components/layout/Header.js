@@ -7,12 +7,15 @@ import List from "./List.js";
 import ListItem from "./ListItem.js";
 import { FaUser } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Header() {
   const [show, setShow] = useState(false);
   const [accountshow, setAccountshow] = useState(false);
+  const [cart, setCart] = useState(false);
   const ref = useRef();
   const accountRef = useRef();
+  const cartRef = useRef();
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
       if (ref.current.contains(e.target)) {
@@ -28,6 +31,15 @@ export default function Header() {
         setAccountshow(true);
       } else {
         setAccountshow(false);
+      }
+    });
+  }, []);
+  useEffect(() => {
+    document.body.addEventListener("click", (e) => {
+      if (cartRef.current.contains(e.target)) {
+        setCart(true);
+      } else {
+        setCart(false);
       }
     });
   }, []);
@@ -74,7 +86,7 @@ export default function Header() {
           </div>
 
           <h1>ssd</h1>
-          <div>
+          <div className="flex gap-5">
             <Dropdown
               titleIcon={
                 <>
@@ -95,6 +107,32 @@ export default function Header() {
                     className="hover:bg-white hover:text-black bg-primary text-white text-sm font-normal pt-[17px] pb-[15px] hover:font-bold text-center capitalize lg:my-0 transition-all ease-in duration-300"
                   />
                 </List>
+              )}
+            </Dropdown>
+            <Dropdown
+              titleIcon={
+                <>
+                  <FaShoppingCart />
+                </>
+              }
+              className="relative mr-3"
+              dropref={cartRef}
+            >
+              <p className="font-dmsans w-4 h-4 text-[12px] shadow-lg bg-[#D8D8D8] rounded-full flex justify-center items-center absolute -top-2 left-2">
+                1
+              </p>
+              {cart && (
+                <>
+                  <div className="w-[358px] absolute bg-[#F5F5F3] top-6 right-0 shadow-md">
+                    <div className="px-5 py-5 flex gap-5 items-center">
+                      <div className="w-[80px] h-[80px] bg-[#D8D8D8]"></div>
+                      <div>
+                        <h6>Black Smart Watch</h6>
+                        <p>$44.00</p>
+                      </div>
+                    </div>
+                  </div>
+                </>
               )}
             </Dropdown>
           </div>

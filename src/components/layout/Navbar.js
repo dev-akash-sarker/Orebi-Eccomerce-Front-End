@@ -36,19 +36,19 @@ export default function Navbar() {
                 <div>
                   <List className="lg:flex lg:justify-end lg:gap-x-10 mt-5 lg:mt-0">
                     <ListItem
-                      className="font-dmsans text-sm font-regular hover:font-bold"
+                      className="font-dmsans text-sm font-regular hover:font-bold my-2.5 lg:my-2.5"
                       itemname="Home"
                     />
                     <ListItem
-                      className="font-dmsans text-sm font-regular hover:font-bold"
+                      className="font-dmsans text-sm font-regular hover:font-bold my-2.5 lg:my-2.5"
                       itemname="About"
                     />
                     <ListItem
-                      className="font-dmsans text-sm font-regular hover:font-bold"
+                      className="font-dmsans text-sm font-regular hover:font-bold my-2.5 lg:my-2.5"
                       itemname="Service"
                     />
                     <ListItem
-                      className="font-dmsans text-sm font-regular hover:font-bold"
+                      className="font-dmsans text-sm font-regular hover:font-bold my-2.5 lg:my-2.5"
                       itemname="Contact"
                     />
                   </List>
