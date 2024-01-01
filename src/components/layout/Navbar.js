@@ -21,15 +21,15 @@ export default function Navbar() {
   return (
     <div>
       <nav>
-        <div className="max-w-container mx-auto p-2.5">
-          <Flex className="lg:flex lg:items-center" hxm="hello">
+        <div className="max-w-container mx-auto p-2.5 py-8">
+          <Flex className=" lg:flex lg:items-center" hxm="hello">
             <div className="lg:w-3/12">
               <Image imagesrc="./assets/logo.png" />
             </div>
 
             <div className="lg:w-9/12 w-full ">
               <HiBars3
-                className="block lg:hidden ml-auto absolute right-2.5 top-2.5"
+                className="block lg:hidden ml-auto absolute right-2.5 top-[32px]"
                 onClick={() => setShow(!show)}
               />
               {show && (

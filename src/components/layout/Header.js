@@ -7,7 +7,9 @@ import List from "./List.js";
 import ListItem from "./ListItem.js";
 import { FaUser } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaSearch } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
+import Search from "./Search.js";
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -18,24 +20,19 @@ export default function Header() {
   const cartRef = useRef();
   useEffect(() => {
     document.body.addEventListener("click", (e) => {
+      // dropdown category
       if (ref.current.contains(e.target)) {
         setShow(true);
       } else {
         setShow(false);
       }
-    });
-  }, []);
-  useEffect(() => {
-    document.body.addEventListener("click", (e) => {
+      // mycount dropdown
       if (accountRef.current.contains(e.target)) {
         setAccountshow(true);
       } else {
         setAccountshow(false);
       }
-    });
-  }, []);
-  useEffect(() => {
-    document.body.addEventListener("click", (e) => {
+      // cart dropdown
       if (cartRef.current.contains(e.target)) {
         setCart(true);
       } else {
@@ -43,10 +40,11 @@ export default function Header() {
       }
     });
   }, []);
+
   return (
-    <div className="bg-[#F5F5F3]">
+    <div className="bg-[#F5F5F3] py-6">
       <Container>
-        <Flex className="flex justify-between">
+        <Flex className="flex justify-between items-center">
           <div>
             <Dropdown
               title="Shop by Category"
@@ -85,12 +83,20 @@ export default function Header() {
             </Dropdown>
           </div>
 
-          <h1>ssd</h1>
-          <div className="flex gap-5">
+          <div className="w-[601px] relative mx-4 lg:mx-0">
+            <Search
+              className="w-full px-5 py-4 placeholder:text-[#c4c4c4]"
+              placeholder="Search Products"
+            />
+            <FaSearch className="absolute top-1/2 -translate-y-1/2 right-5" />
+          </div>
+
+          <div className="flex gap-2 md:gap-5 items-center">
             <Dropdown
               titleIcon={
                 <>
-                  <FaUser /> <FaCaretDown />
+                  <FaUser className="text-md md:text-xl" />{" "}
+                  <FaCaretDown className="text-md md:text-xl" />
                 </>
               }
               className="relative"
@@ -100,11 +106,11 @@ export default function Header() {
                 <List className="w-[200px] absolute top-6 right-0 shadow-md transition-all ease-in duration-300">
                   <ListItem
                     itemname="My Account"
-                    className="hover:bg-white hover:text-black bg-primary text-white text-sm font-normal pt-[17px] pb-[15px] hover:font-bold text-center capitalize lg:my-0 transition-all ease-in duration-300"
+                    className="hover:bg-primary hover:text-white bg-white text-black border-b border-solid border-[#f0f0f0] text-sm font-normal pt-[17px] pb-[15px] hover:font-bold text-center capitalize lg:my-0 transition-all ease-in duration-300"
                   />
                   <ListItem
                     itemname="Log Out"
-                    className="hover:bg-white hover:text-black bg-primary text-white text-sm font-normal pt-[17px] pb-[15px] hover:font-bold text-center capitalize lg:my-0 transition-all ease-in duration-300"
+                    className="hover:bg-primary hover:text-white bg-white text-black border-b border-solid border-[#f0f0f0] text-sm font-normal pt-[17px] pb-[15px] hover:font-bold text-center capitalize lg:my-0 transition-all ease-in duration-300"
                   />
                 </List>
               )}
@@ -112,7 +118,7 @@ export default function Header() {
             <Dropdown
               titleIcon={
                 <>
-                  <FaShoppingCart />
+                  <FaShoppingCart className="text-md md:text-xl" />
                 </>
               }
               className="relative mr-3"
@@ -123,12 +129,37 @@ export default function Header() {
               </p>
               {cart && (
                 <>
-                  <div className="w-[358px] absolute bg-[#F5F5F3] top-6 right-0 shadow-md">
-                    <div className="px-5 py-5 flex gap-5 items-center">
-                      <div className="w-[80px] h-[80px] bg-[#D8D8D8]"></div>
+                  <div className="w-[358px] absolute bg-[#F5F5F3] top-6 right-0 shadow-inner">
+                    <div className="px-5 py-5 flex justify-between items-center border-b-gray-300">
+                      <div className="flex justify-between items-center gap-5">
+                        <div className="w-[80px] h-[80px] bg-[#D8D8D8] border border-solid border-gray-200 overflow-hidden">
+                          <img src="./assets/cartImage.png" alt="cartImage" />
+                        </div>
+                        <div>
+                          <h6 className="font-bold text-sm font-dmsans">
+                            Black Smart Watch
+                          </h6>
+                          <p className="font-bold text-sm font-dmsans">
+                            $44.00
+                          </p>
+                        </div>
+                      </div>
                       <div>
-                        <h6>Black Smart Watch</h6>
-                        <p>$44.00</p>
+                        <FaXmark />
+                      </div>
+                    </div>
+                    <div className="px-5 py-5 bg-white shadow-md">
+                      <p className="font-normal text-[16px] font-dmsans text-[#767676]">
+                        Subtotal:{" "}
+                        <span className="font-bold text-primary">$44.00</span>
+                      </p>
+                      <div className="flex justify-between mt-[13px]">
+                        <button className="pl-[41px] py-4 pr-10 bg-white border border-black font-dmsans text-sm font-bold hover:bg-black hover:text-white transition-all ">
+                          View Cart
+                        </button>
+                        <button className="pl-[41px] py-4 pr-10 bg-white border border-black font-dmsans text-sm font-bold hover:bg-black hover:text-white transition-all ">
+                          Checkout
+                        </button>
                       </div>
                     </div>
                   </div>
