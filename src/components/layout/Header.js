@@ -53,7 +53,7 @@ export default function Header() {
               dropref={ref}
             >
               {show && (
-                <List className="absolute w-[263px] bg-primary text-white top-6 left-0 transition-all ease-linear">
+                <List className="absolute z-10 w-[263px] bg-primary text-white top-6 left-0 transition-all ease-linear">
                   <ListItem
                     className="px-5 py-4 capitalize font-dmsans font-normal hover:font-bold text-sm text-white opacity-[70%] hover:opacity-[100%] hover:ml-2 transition-all ease-in duration-300"
                     itemname="Accesories"
@@ -103,7 +103,7 @@ export default function Header() {
               dropref={accountRef}
             >
               {accountshow && (
-                <List className="w-[200px] absolute top-6 right-0 shadow-md transition-all ease-in duration-300">
+                <List className="w-[200px] absolute z-20 top-6 right-0 shadow-md transition-all ease-in duration-300">
                   <ListItem
                     itemname="My Account"
                     className="hover:bg-primary hover:text-white bg-white text-black border-b border-solid border-[#f0f0f0] text-sm font-normal pt-[17px] pb-[15px] hover:font-bold text-center capitalize lg:my-0 transition-all ease-in duration-300"
@@ -129,7 +129,7 @@ export default function Header() {
               </p>
               {cart && (
                 <>
-                  <div className="w-[358px] absolute bg-[#F5F5F3] top-6 right-0 shadow-inner">
+                  <div className="w-[358px] absolute z-20 bg-[#F5F5F3] top-6 right-0 shadow-inner">
                     <div className="px-5 py-5 flex justify-between items-center border-b-gray-300">
                       <div className="flex justify-between items-center gap-5">
                         <div className="w-[80px] h-[80px] bg-[#D8D8D8] border border-solid border-gray-200 overflow-hidden">
