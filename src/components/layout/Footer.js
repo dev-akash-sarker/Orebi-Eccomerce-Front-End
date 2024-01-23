@@ -10,9 +10,9 @@ export default function Footer() {
     <>
       <div className=" bg-[#f5f5f3] mt-24">
         <Container className="pt-[55px] pb-[65px]">
-          <Flex className="flex justify-between">
-            <Flex>
-              <h4 className=" font-dmsans text-base font-bold leading-6 text-[#262626] mb-4">
+          <Flex className="flex justify-between flex-wrap">
+            <Flex className="mt-2 md:mt-0 w-[50%] md:w-auto">
+              <h4 className=" font-dmsans text-sm md:text-base font-bold leading-6 text-[#262626] mb-4">
                 Menu
               </h4>
               <Flex className=" list-none flex flex-col gap-[6px]">
@@ -58,8 +58,8 @@ export default function Footer() {
                 </li>
               </Flex>
             </Flex>
-            <Flex>
-              <h4 className=" font-dmsans text-base font-bold leading-6 text-[#262626] mb-4">
+            <Flex className="mt-2 md:mt-0 w-[50%] md:w-auto">
+              <h4 className=" font-dmsans text-sm md:text-base font-bold leading-6 text-[#262626] mb-4">
                 SHOP
               </h4>
               <Flex className=" list-none flex flex-col gap-[6px]">
@@ -105,8 +105,8 @@ export default function Footer() {
                 </li>
               </Flex>
             </Flex>
-            <Flex>
-              <h4 className=" font-dmsans text-base font-bold leading-6 text-[#262626] mb-4">
+            <Flex className="mt-2 md:mt-0 w-[50%] md:w-auto">
+              <h4 className=" font-dmsans text-sm md:text-base font-bold leading-6 text-[#262626] mb-4">
                 Help
               </h4>
               <Flex className=" list-none flex flex-col gap-[6px]">
@@ -152,8 +152,8 @@ export default function Footer() {
                 </li>
               </Flex>
             </Flex>
-            <Flex className="flex flex-col gap-4">
-              <h4 className=" w-[130px] font-dmsans text-base font-bold leading-6 text-[#262626] ">
+            <Flex className="mt-2 md:mt-0 flex flex-col gap-4 w-[50%] md:w-auto">
+              <h4 className=" w-[130px] font-dmsans text-sm md:text-base font-bold leading-6 text-[#262626] ">
                 (052) 611-5711 company@domain.com
               </h4>
               <Flex className=" list-none flex flex-col gap-[6px]">
@@ -199,7 +199,7 @@ export default function Footer() {
                 </li>
               </Flex>
             </Flex>
-            <Flex>
+            <Flex className="mt-4 md:mt-0 w-[50%] md:w-auto">
               <Link to="#">
                 <Image imagesrc="./assets/OREBI.png" alt="orebi" />
               </Link>
@@ -207,8 +207,8 @@ export default function Footer() {
           </Flex>
         </Container>
         <Container>
-          <Flex className="flex justify-between items-center pb-14">
-            <Flex className="flex justify-start items-center gap-5">
+          <Flex className="md:flex md:justify-between md:items-center text-center md:text-right pb-14">
+            <Flex className="flex justify-center mb-3 md:mb-0 md:justify-start items-center gap-5">
               <Link to="#facebook" className=" inline-block">
                 <FaFacebookF />
               </Link>

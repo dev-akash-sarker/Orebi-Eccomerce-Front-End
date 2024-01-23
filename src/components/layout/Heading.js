@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function Headings({ title }) {
+export default function Headings({ title, className, children }) {
   return (
     <>
-      <h2 className=" font-dmsans mb-12 font-bold text-[39px]">{title}</h2>
+      <h2 className={className + " font-dmsans mb-12 font-bold"}>
+        {title} {children}
+      </h2>
     </>
   );
 }

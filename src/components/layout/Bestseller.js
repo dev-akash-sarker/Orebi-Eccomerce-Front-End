@@ -67,7 +67,7 @@ export default function Bestseller() {
     <>
       <Container>
         <div className=" mt-52">
-          <Headings title="Best Seller" />
+          <Headings className="text-[39px]" title="Best Seller" />
           <Slider className="gap-10 md:gap-x-10" {...settings}>
             <div className="sm:max-w-[300px]  md:max-lg:max-w-[345px] lg:max-w-[370px]">
               <Product

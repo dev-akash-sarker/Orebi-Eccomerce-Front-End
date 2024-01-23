@@ -67,7 +67,7 @@ export default function Offers() {
   };
   return (
     <Container>
-      <Headings title="Special Offers" />
+      <Headings className="text-[39px]" title="Special Offers" />
       <Slider className="gap-10 md:gap-x-10" {...settings}>
         <div className="sm:max-w-[300px]  md:max-lg:max-w-[345px] lg:max-w-[370px]">
           <Product

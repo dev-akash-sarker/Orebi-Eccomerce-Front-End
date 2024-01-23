@@ -8,12 +8,13 @@ import "./index.css";
 import RootLayout from "./components/layout/RootLayout";
 import Home from "./pages/home";
 import Shop from "./pages/shop";
+// import NotFound from "./components/layout/NotFound";
 
 let router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="/shop" element={<Shop />} />
+      <Route path="/products" element={<Shop />} />
     </Route>
   )
 );

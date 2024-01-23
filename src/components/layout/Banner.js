@@ -92,10 +92,9 @@ export default function Banner() {
     ],
   };
 
-  console.log("hello", dotActive);
   return (
     <div>
-      <Slider {...settings}>
+      <Slider className="sliderbanner" {...settings}>
         <Link to="#">
           <div className="w-full">
             <img

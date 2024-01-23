@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Image({ imagesrc, alt, width }) {
+export default function Image({ imagesrc, alt, width, className }) {
   return (
     <>
-      <img src={imagesrc} width={width} alt={alt} />
+      <img src={imagesrc} className={className} width={width} alt={alt} />
     </>
   );
 }

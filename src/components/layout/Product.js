@@ -16,7 +16,7 @@ export default function Product({
     <>
       <div>
         <div className="relative overflow-y-hidden group">
-          <Image imagesrc={src} />
+          <Image className="w-full" imagesrc={src} />
           {badge && <Badge title="new" />}
           <div className=" w-full absolute -bottom-[44%] lg:max-xl:-bottom-[75%] group-hover:bottom-0 transition-all left-0 h-40 bg-white">
             <Flex className="flex justify-end items-center gap-x-1 sm:gap-x-4 mt-5">
@@ -44,12 +44,12 @@ export default function Product({
             <h3 className="font-dmsans font-bold sm:text-sm text-xl">
               {productname}
             </h3>
-            {productprice === "" ||
+            {/* {productprice === "" ||
               (productprice !== undefined && (
                 <p className="font-dmsans capitalize font-normal text-base leading-7 text-[#767676]">
                   ${productprice}
                 </p>
-              ))}
+              ))} */}
           </Flex>
           <p className="font-dmsans font-normal mt-3 text-base leading-7 text-[#767676]">
             {prouctcolor ? prouctcolor : ""}

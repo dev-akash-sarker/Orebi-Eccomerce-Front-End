@@ -71,7 +71,7 @@ export default function Newarrivel() {
     <>
       <div className="mt-8">
         <Container>
-          <Headings title="New Arrivals" />
+          <Headings className="text-[39px]" title="New Arrivals" />
           <Slider className="gap-10 md:gap-x-10" {...settings}>
             <div className="sm:max-w-[300px]  md:max-lg:max-w-[345px] lg:max-w-[370px]">
               <Product
