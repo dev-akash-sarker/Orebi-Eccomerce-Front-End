@@ -9,7 +9,7 @@ const Catstag = ({ tagname, to, className }) => {
       <div
         className={
           className +
-          " pt-5 pb-[19px] text-base text-[#767676] border-b border-[#f0f0f0] font-dmsans font-normal "
+          " pt-5 pb-[19px] text-base hover:text-primary transition-all text-[#767676] border-b border-[#f0f0f0] font-dmsans font-normal "
         }
       >
         <Link to={to}>{tagname}</Link>
@@ -58,7 +58,7 @@ const ColorExpend = () => {
     <>
       <details>
         <summary className=" list-none">
-          <Headings className="text-xl mb-0 pt-5 pb-[19px] relative">
+          <Headings className="text-xl mb-[0px!important] pt-5 pb-[19px] relative">
             Shop by Color
             <div className=" absolute top-1/2 -translate-y-1/2 right-4">
               <FaCaretDown />
@@ -108,7 +108,7 @@ const Brands = () => {
     <>
       <details>
         <summary className=" list-none">
-          <Headings className="text-xl mb-0 pt-5 pb-[19px] relative">
+          <Headings className="text-xl mb-[0px!important] pt-5 pb-[19px] relative">
             Shop by Brand
             <div className=" absolute top-1/2 -translate-y-1/2 right-4">
               <FaCaretDown />
@@ -129,7 +129,7 @@ const Prices = () => {
   return (
     <>
       <div>
-        <Headings className="text-xl mb-0 pt-5 pb-[19px] relative">
+        <Headings className="text-xl mb-[0!important] pt-5 pb-[19px] relative">
           Shop by Price
         </Headings>
         <Catstag tagname="$0.00 - $9.99" />

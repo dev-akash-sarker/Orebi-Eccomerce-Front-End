@@ -5,7 +5,9 @@ import Flex from "../components/layout/Flex";
 import { IoGrid } from "react-icons/io5";
 import Paginations from "../components/layout/Paginations";
 import SelectLable from "../components/layout/SelectLable";
+// eslint-disable-next-line no-unused-vars
 import ProductLeftsidebar from "../components/layout/ProductLeftsidebar";
+import LeftSidebar from "../components/layout/LeftSidebar";
 export default function Shop() {
   const [itemPerPage, setItemPerPage] = useState(12);
   const showpagination = (e) => {
@@ -15,10 +17,13 @@ export default function Shop() {
   return (
     <>
       <Container>
-        <Mypath hometitle="home" istitle="true" />
+        <Mypath hometitle="home" />
         <Flex className="flex gap-x-9 mt-32">
           <Flex className=" w-1/4">
-            <ProductLeftsidebar />
+            {/* my way to make the left part  */}
+            {/* <ProductLeftsidebar /> */}
+            {/* Our mentor way to make the left part */}
+            <LeftSidebar />
           </Flex>
           <Flex className=" w-3/4 relative">
             <Flex className=" md:flex justify-between items-center mb-3">
@@ -30,12 +35,9 @@ export default function Shop() {
               <Flex className=" md:flex md:justify-start md:gap-3">
                 <div className="md:flex md:justify-start md:items-center ">
                   <SelectLable labelname="Sort by" />
-                  <select
-                    id="countries"
-                    class="w-[239px] border border-[#f0f0f0] text-gray-900 text-sm rounded-lg focus:border-black-500 block p-2.5"
-                  >
+                  <select className="w-[239px] border border-[#f0f0f0] text-gray-900 text-sm rounded-lg focus:border-black-500 block p-2.5">
                     <option
-                      selected
+                      defaultValue="Featured"
                       className="font-dmsans focus:bg-red-500 hover:bg-red-500 font-normal text-base rounded-none"
                     >
                       Featured
@@ -70,12 +72,11 @@ export default function Shop() {
                 <div className="md:flex md:justify-start md:items-center">
                   <SelectLable labelname="show" />
                   <select
-                    id="countries"
-                    class="w-[139px] border border-[#f0f0f0] text-gray-900 text-sm rounded-lg focus:border-black-500 block p-2.5"
+                    className="w-[139px] border border-[#f0f0f0] text-gray-900 text-sm rounded-lg focus:border-black-500 block p-2.5"
                     onClick={showpagination}
                   >
                     <option
-                      selected
+                      defaultValue="12"
                       className="font-dmsans focus:bg-red-500 hover:bg-red-500 font-normal text-base rounded-none"
                     >
                       12

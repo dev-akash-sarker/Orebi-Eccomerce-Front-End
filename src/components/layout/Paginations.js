@@ -15,14 +15,15 @@ function Items({ currentItems }) {
   return (
     <>
       {currentItems &&
-        currentItems.map((item) => (
-          <div className="md:w-[49%] lg:w-[32%]">
+        currentItems.map((item, i) => (
+          <div className="md:w-[49%] lg:w-[32%]" key={i}>
             <Product
               src="./assets/cap.png"
               badge={true}
               productname="Basic Crew Neck Tee"
               productprice="40.50"
               prouctcolor="Black"
+              id={item}
             />
           </div>
         ))}
