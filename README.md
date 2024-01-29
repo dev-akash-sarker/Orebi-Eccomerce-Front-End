@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # 04 Layouts Setup
+=======
+# This is a boyler plate of the starter application for eccomerce
+
+>>>>>>> 0f80e6b6edf32c0abec8c73977f656656bb73bcd
 
 # Getting Started with Create React App
 
