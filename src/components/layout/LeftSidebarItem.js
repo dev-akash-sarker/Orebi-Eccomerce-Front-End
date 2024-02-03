@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 export default function LeftSidebarItem({ children, subdropDown, title }) {
+  // eslint-disable-next-line no-unused-vars
   const [drop, setDrop] = useState(subdropDown);
   const [show, setShow] = useState(false);
   return (

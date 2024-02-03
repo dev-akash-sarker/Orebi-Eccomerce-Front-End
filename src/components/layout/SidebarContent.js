@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { GoTriangleDown } from "react-icons/go";
 import LeftSidebarItem from "./LeftSidebarItem";
 export default function SidebarContent({ dropDown, title }) {
+  // eslint-disable-next-line no-unused-vars
   const [drop, setDrop] = useState(dropDown);
   const [show, setShow] = useState(dropDown);
   return (
