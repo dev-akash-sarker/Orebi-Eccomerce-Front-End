@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GoTriangleDown } from "react-icons/go";
 import LeftSidebarItem from "./LeftSidebarItem";
-export default function SidebarContent({ dropDown, title }) {
+export default function SidebarContent({ dropDown, title, data }) {
   // eslint-disable-next-line no-unused-vars
   const [drop, setDrop] = useState(dropDown);
   const [show, setShow] = useState(dropDown);
@@ -28,40 +28,56 @@ export default function SidebarContent({ dropDown, title }) {
 
         {show && (
           <div>
-            <LeftSidebarItem title="Color 1" subdropDown={false}>
-              Samples 1
-            </LeftSidebarItem>
-            <LeftSidebarItem title="Color 2" subdropDown={false}>
-              Samples 1
-            </LeftSidebarItem>
-            <LeftSidebarItem title="Color 3" subdropDown={false}>
-              Samples 1
-            </LeftSidebarItem>
-            <LeftSidebarItem title="Color 4" subdropDown={false}>
-              Samples 1
-            </LeftSidebarItem>
-            <LeftSidebarItem title="Color 5" subdropDown={false}>
-              Samples 1
-            </LeftSidebarItem>
+            {data.map((item) => (
+              <>
+                <LeftSidebarItem
+                  title={item.name}
+                  varient={item.varient}
+                  subdropDown={item.subcategory ? true : false}
+                  data={data}
+                >
+                  {item.subcategory &&
+                    item.subcategory.map((items) => (
+                      <>
+                        <div className="border-b border-[#f0f0f0] last:border-[transparent]">
+                          <h1 className="font-dmsans py-5 font-normal text-base text-two relative">
+                            {items.name ? items.name : items.range}
+                          </h1>
+                          <div
+                            className=" absolute w-[11px] h-[11px] rounded-full top-1/2 left-0 -translate-y-1/2"
+                            style={{ background: item.varient }}
+                          ></div>
+                        </div>
+                      </>
+                    ))}
+                </LeftSidebarItem>
+              </>
+            ))}
           </div>
         )}
         {!drop && (
           <div>
-            <LeftSidebarItem title="Category 1" subdropDown={true}>
-              hello
-            </LeftSidebarItem>
-            <LeftSidebarItem title="Category 2" subdropDown={false}>
-              hello
-            </LeftSidebarItem>
-            <LeftSidebarItem title="Category 3" subdropDown={true}>
-              hello
-            </LeftSidebarItem>
-            <LeftSidebarItem title="Category 4" subdropDown={false}>
-              hello
-            </LeftSidebarItem>
-            <LeftSidebarItem title="Category 5" subdropDown={false}>
-              hello
-            </LeftSidebarItem>
+            {data.map((item, i) => (
+              <LeftSidebarItem
+                title={item.name}
+                key={i}
+                subdropDown={item.subcategory ? true : false}
+              >
+                {item.subcategory &&
+                  item.subcategory.map((items, j) => (
+                    <>
+                      <div
+                        key={j}
+                        className="border-b border-[#f0f0f0] last:border-[transparent]"
+                      >
+                        <h1 className="font-dmsans py-5 font-normal text-base text-two relative">
+                          {items.name}
+                        </h1>
+                      </div>
+                    </>
+                  ))}
+              </LeftSidebarItem>
+            ))}
           </div>
         )}
       </div>
